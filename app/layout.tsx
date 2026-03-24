@@ -1,0 +1,45 @@
+import type { Metadata } from 'next'
+import { Inter, Fira_Code } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import './globals.css'
+
+const inter = Inter({ subsets: ["latin"] });
+const firaCode = Fira_Code({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: 'CPE - Dashboard',
+  description: 'CPE',
+  generator: 'v0.app',
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="es" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased bg-slate-950 text-slate-50`}>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
+}
