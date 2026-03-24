@@ -85,14 +85,14 @@ export function SidebarNav({
             label="Dashboard"
             isActive
           />
-          <NavItem
+          {/* <NavItem
             icon={<FileText className="w-5 h-5" />}
             label="Facturas"
           />
           <NavItem
             icon={<Settings className="w-5 h-5" />}
             label="Configuración"
-          />
+          /> */}
         </div>
       )}
 
@@ -107,10 +107,10 @@ export function SidebarNav({
             label="Mis Comprobantes"
             isActive
           />
-          <NavItem
+          {/* <NavItem
             icon={<BarChart3 className="w-5 h-5" />}
             label="Reportes"
-          />
+          /> */}
         </div>
       )}
 
